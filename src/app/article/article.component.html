@@ -1,11 +1,13 @@
 <div class="container">
   <h1 [ngStyle]="{'background': getColor()}">{{ title }}</h1>
-  <p> {{ content }}</p>
-  <button
-  class="btn btn-primary"
-  (click)="getColor; isTechRelated = !isTechRelated"
-  >
+  <p>{{ content }}</p>
+
+  <button class="btn btn-primary" (click)="setTechRelated(); getColor()">
   Is tech related?
 </button>
-<!-- <p> {{ techYes }}</p> -->
+
+<hr/>
+<div *ngIf="this.isTechRelated === true; else elseBlock"><p>{{ techYes }}</p></div>
+  <ng-template #elseBlock><p>{{ techNo }}</p></ng-template>
+
 </div>

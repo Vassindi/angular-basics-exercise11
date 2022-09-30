@@ -12,10 +12,24 @@ import { Component } from "@angular/core";
   title: string = "Whatever you want";
   content: string = "Wabadebadoo Zapzing Ayaw Ko Bobo Siya Blursh! Meshaloob! Blursh! Uhh Shamoo Ralla Poo Cuh Teekaloo Depwa Spanewash Depla Blah Shoo Flee Turkey Nurbler? Firby Nurbs Benzi Chibna Looble Bazebni Gweb Ugh...Groble! Wag Nere, Wap Zow Ribby Wibbs Bloo Bagoo Dag Dag";
   isTechRelated: boolean = true;
-  getColor() {
-    return this.isTechRelated === true ? 'blue' : 'yellow'
+
+  setTechRelated() {
+    console.log(this.isTechRelated)
+    return this.isTechRelated = Math.random() > 0.5;
   }
-  // techYes = "Tech Related"
+
+  getColor() {
+    return this.isTechRelated === true ? 'yellow' : 'blue';
+  }
+
+  //checkTechRelated() {
+  //  return this.isTechRelated;
+  // }
+
+
+
+ techYes = "Tech Related"
+ techNo = "Not Tech Related"
  }
 
 // Simlish lol
